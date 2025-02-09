@@ -1,0 +1,12 @@
+join 月神 leftmost
+月神: 这是哪里？
+leave 月神
+
+join 玩家 rightmost
+玩家: （？？天上掉下个林妹妹？）
+玩家: 这是我家，你谁呀？
+leave 玩家
+
+join 月神 leftmost
+月神: 你个登徒子，我衣服呢！！！
+leave 月神
