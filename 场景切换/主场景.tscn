@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://kyg8df83mqol"]
+
+[ext_resource type="PackedScene" uid="uid://bocv1f873hjyw" path="res://场景切换/探索场景.tscn" id="1_at55x"]
+
+[node name="主场景" type="Node2D"]
+
+[node name="探索场景" parent="." instance=ExtResource("1_at55x")]
