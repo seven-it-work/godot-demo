@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://f0fvsv4ioab7"]
+
+[ext_resource type="Script" path="res://场景切换/战斗景.gd" id="1_rc8yo"]
+
+[node name="战斗景" type="Node2D"]
+script = ExtResource("1_rc8yo")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 268.0
+offset_top = 92.0
+offset_right = 352.0
+offset_bottom = 131.0

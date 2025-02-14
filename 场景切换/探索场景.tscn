@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bocv1f873hjyw"]
+
+[ext_resource type="Script" path="res://场景切换/探索场景.gd" id="1_1aap2"]
+
+[node name="探索场景" type="Node2D"]
+script = ExtResource("1_1aap2")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "探索"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 33.0
+offset_right = 67.0
+offset_bottom = 57.0
+text = "战斗"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
