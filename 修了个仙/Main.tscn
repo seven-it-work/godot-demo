@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://wwvb7d5kwucb"]
+
+[ext_resource type="PackedScene" uid="uid://cqlngohh1mgei" path="res://组件/路线.tscn" id="1_7bg1h"]
+[ext_resource type="PackedScene" uid="uid://bb8pkanby017i" path="res://组件/玩家详情.tscn" id="2_h5mmu"]
+
+[node name="Main" type="Node2D"]
+
+[node name="路线3" parent="." instance=ExtResource("1_7bg1h")]
+position = Vector2(832, 78)
+
+[node name="路线2" parent="." instance=ExtResource("1_7bg1h")]
+position = Vector2(443, 72)
+
+[node name="路线" parent="." instance=ExtResource("1_7bg1h")]
+position = Vector2(98, 71)
+
+[node name="玩家详情" parent="." instance=ExtResource("2_h5mmu")]
+position = Vector2(29, 394)

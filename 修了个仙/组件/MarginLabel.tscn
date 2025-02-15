@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cnjkcu8asrkdq"]
+
+[node name="MarginLabel" type="MarginContainer"]
+offset_right = 1.0
+offset_bottom = 23.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+text = "测试装备名称测试装
+备名称测试装备名称测试装备名称测试装备名称测试装备名称测试装备名称测试装备名称"
+autowrap_mode = 1
+text_overrun_behavior = 4

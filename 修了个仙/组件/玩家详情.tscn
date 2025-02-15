@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bb8pkanby017i"]
+
+[node name="玩家详情" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 472.0
+offset_bottom = 202.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 228.0
+offset_bottom = 40.0
+
+[node name="Label2" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+text = "{名称}"
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+text = "练气期（初探玄门50层）"
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 42.0
+offset_right = 230.0
+offset_bottom = 200.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer2"]
+custom_minimum_size = Vector2(227, 158)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "灵气值："
+
+[node name="ProgressBar2" type="ProgressBar" parent="Panel/ScrollContainer2/VBoxContainer/Label"]
+layout_mode = 2
+offset_left = 59.0
+offset_top = -1.0
+offset_right = 215.0
+offset_bottom = 26.0
+value = 100.0
+
+[node name="Label2" type="Label" parent="Panel/ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+text = "灵气值："
+
+[node name="ProgressBar2" type="ProgressBar" parent="Panel/ScrollContainer2/VBoxContainer/Label2"]
+layout_mode = 2
+offset_left = 59.0
+offset_top = -1.0
+offset_right = 215.0
+offset_bottom = 26.0
+value = 100.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+custom_minimum_size = Vector2(0, 158)
+layout_mode = 0
+offset_left = 235.0
+offset_top = 40.0
+offset_right = 468.0
+offset_bottom = 198.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "攻击力：10"
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "防御力：10"
+
+[node name="Label4" type="Label" parent="Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "命中率：10%"
+
+[node name="Label2" type="Label" parent="Panel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "闪避率：10%"
