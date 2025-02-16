@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "游戏设计.md",
+                "file": "问鼎仙途/问鼎仙途.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "游戏设计"
+              "title": "问鼎仙途"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "46c4b3b1a6ecfacb",
@@ -169,8 +168,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "16abac02d61510bb",
+  "active": "b0d8fe4a81c7a049",
   "lastOpenFiles": [
+    "问鼎仙途/问鼎仙途(1-500章).txt",
+    "问鼎仙途",
+    "游戏设计.md",
+    "问鼎仙途/问鼎仙途.md",
     "组件/MarginLabel.tscn",
     "组件/margin_container_label.gd",
     "组件/MarginContainerLabel.tscn",
@@ -180,9 +183,6 @@
     "组件/路线.tscn",
     "组件",
     "Main.tscn",
-    "node_2d.gd",
-    "utils/MathFunc.gd",
-    "icon.svg",
-    "游戏设计.md"
+    "icon.svg"
   ]
 }
