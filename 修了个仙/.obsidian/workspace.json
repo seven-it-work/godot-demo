@@ -15,7 +15,7 @@
               "state": {
                 "file": "问鼎仙途/问鼎仙途.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "问鼎仙途"
@@ -168,21 +168,27 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "b0d8fe4a81c7a049",
+  "active": "16abac02d61510bb",
   "lastOpenFiles": [
-    "问鼎仙途/问鼎仙途(1-500章).txt",
-    "问鼎仙途",
+    "问鼎仙途/问鼎仙途(2001-2500章).txt",
+    "问鼎仙途/问鼎仙途(1001-1500章).txt",
+    "问鼎仙途/问鼎仙途(501-1000章).txt",
     "游戏设计.md",
+    "1/修了个仙.apple-touch-icon.png",
+    "1/修了个仙.icon.png",
+    "1/修了个仙.png",
+    "1/修了个仙.html",
+    "1/修了个仙.audio.worklet.js",
+    "1/修了个仙.wasm",
+    "1/修了个仙.js",
+    "1/修了个仙.pck",
+    "1",
+    "3/修了个仙.pck",
+    "3/修了个仙.console.exe",
+    "修了个仙.apple-touch-icon.png",
+    "修了个仙.icon.png",
+    "修了个仙.png",
     "问鼎仙途/问鼎仙途.md",
-    "组件/MarginLabel.tscn",
-    "组件/margin_container_label.gd",
-    "组件/MarginContainerLabel.tscn",
-    "组件/物品.tscn",
-    "node_2d.tscn",
-    "组件/玩家详情.tscn",
-    "组件/路线.tscn",
-    "组件",
-    "Main.tscn",
     "icon.svg"
   ]
 }
