@@ -8,16 +8,25 @@
 
 config_version=5
 
+[GDScript_Formatter]
+
+format_on_save=175
+fast_but_unsafe=175
+
 [application]
 
 config/name="修了个仙"
-run/main_scene="res://组件/玩家详情.tscn"
+run/main_scene="res://saveDemo/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 MathFunc="*res://utils/MathFunc.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdscript_formatter/plugin.cfg")
 
 [rendering]
 

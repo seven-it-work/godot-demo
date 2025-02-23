@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://wwvb7d5kwucb"]
+[gd_scene load_steps=4 format=3 uid="uid://wwvb7d5kwucb"]
 
 [ext_resource type="PackedScene" uid="uid://cqlngohh1mgei" path="res://组件/路线.tscn" id="1_7bg1h"]
+[ext_resource type="Script" path="res://main.gd" id="1_yl5em"]
 [ext_resource type="PackedScene" uid="uid://bb8pkanby017i" path="res://组件/玩家详情.tscn" id="2_h5mmu"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_yl5em")
 
 [node name="路线3" parent="." instance=ExtResource("1_7bg1h")]
 position = Vector2(832, 78)
