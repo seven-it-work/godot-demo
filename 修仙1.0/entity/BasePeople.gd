@@ -1,5 +1,5 @@
 class_name BasePeople
-extends Object
+extends Node
 
 
 var 境界=[]
@@ -9,8 +9,16 @@ var base_up_need_exp=10
 var nameInfo:String
 # 进度条属性
 var progress_property:Dictionary={
-	"hp":Property.create(0,100,0,1,"生命值"),
-	"mp":Property.create(0,100,0,1,"真元值"),
+	"hp":
+		Property.create(0,100,100,0,1,"生命值",Property.PropertyType.PROGRESS_BAR),
+	"mp":
+		Property.create(0,100,100,0,1,"真元值",Property.PropertyType.PROGRESS_BAR),
+	"shield":
+		Property.create(0,100,0,0,1,"护盾值",Property.PropertyType.NUM),
+	"attack":
+		Property.create(1,10,0,0,1,"攻击力",Property.PropertyType.RANDOM_RANGE),
+	"defense":
+		Property.create(1,5,0,0,1,"防御力",Property.PropertyType.RANDOM_RANGE),
 }
 #当前等级
 var lv:int=0
@@ -24,9 +32,27 @@ var right_equip:BaseEquip
 var left_equip:BaseEquip
 #头装备
 var head_equip:BaseEquip
+#技能1
+var skill_1:BaseSkill=BaseAttack.new()
+#技能2
+var skill_2:BaseSkill=BaseDefense.new()
+#技能3
+var skill_3:BaseSkill
+#技能4
+var skill_4:BaseSkill
 
-
-
+# 生命值计算（如果是加生命值则不走护盾处理逻辑了）
+func change_hp(n:float,hp_true:bool=false):
+	if n<0:
+		if !hp_true:
+			if progress_property.get("shield").current>0:
+				if progress_property.get("shield").current>n:
+					progress_property.get("shield").current+=n;
+					return
+				else:
+					n+=progress_property.get("shield").current
+					progress_property.get("shield").current=0;
+	progress_property.get("hp").current+=n
 
 func _init() -> void:
 	upNeedExp=base_up_need_exp*lv

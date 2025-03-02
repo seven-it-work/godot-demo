@@ -6,14 +6,16 @@ func _ready() -> void:
 	var d:Dictionary={"nameInfo":"测试"}
 	var t=DaoXiu.new()
 	ObjectUtils.copyBean(d,t)
-	print(t.nameInfo)
-	t.update()
-	print(ObjectUtils.inst_2_dict(t))
-	t.update()
-	t=ObjectUtils.dict_2_inst(ObjectUtils.inst_2_dict(t))
-	for i in 100:
-		t.update()
-	print(t.get_lv_str())
+	
+	
+	var d2:Dictionary={"nameInfo":"测试2"}
+	var t2=DaoXiu.new()
+	ObjectUtils.copyBean(d2,t2)
+	
+	print(t2.progress_property)
+	
+	t.skill_1.use_skill(t,[t],[t2])
+	print(t2.progress_property)
 	pass # Replace with function body.
 
 

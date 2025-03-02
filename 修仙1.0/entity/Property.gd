@@ -19,6 +19,18 @@ enum PropertyType {
 @export var nameInfo:String=""
 @export var propertyType:PropertyType=PropertyType.NUM
 
+func _to_string() -> String:
+	return JSON.stringify(inst_to_dict(self))
+
+func get_value()->float:
+	if self.propertyType==PropertyType.PROGRESS_BAR:
+		return current;
+	elif self.propertyType==PropertyType.RANDOM_RANGE:
+		return randf_range(min,max);
+	elif self.propertyType==PropertyType.NUM:
+		return current
+	print("暂时不支持该型")
+	return 0
 
 func doUp():
 	if self.propertyType==PropertyType.PROGRESS_BAR:
@@ -41,15 +53,18 @@ func doUp():
 static func create(
 	min:float,
 	max:float,
+	current:float,
 	upMin:float,
 	upMax:float,
-	nameInfo:String
+	nameInfo:String,
+	propertyType:PropertyType,
 )->Property:
 	var re=Property.new()
 	re.min=min
 	re.max=max
-	re.current=max
+	re.current=current
 	re.upMin=upMin
 	re.upMax=upMax
 	re.nameInfo=nameInfo
+	re.propertyType=propertyType
 	return re;
