@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6puem2b3xelh"]
+
+[ext_resource type="Script" path="res://场景/战斗场景/战斗场景.gd" id="1_84nur"]
+[ext_resource type="PackedScene" uid="uid://dx31no5ldwnbq" path="res://场景/战斗场景/fight_item.tscn" id="2_qctdm"]
+[ext_resource type="PackedScene" uid="uid://biwdbhflxftwx" path="res://场景/战斗场景/fight_skill.tscn" id="3_p2cqy"]
+
+[node name="战斗场景" type="Node2D"]
+script = ExtResource("1_84nur")
+
+[node name="玩家阵营" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(220, 0)
+offset_left = 26.0
+offset_top = 20.0
+offset_right = 1126.0
+offset_bottom = 170.0
+size_flags_horizontal = 3
+
+[node name="playerContainer" type="HBoxContainer" parent="玩家阵营"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="玩家1" parent="玩家阵营/playerContainer" instance=ExtResource("2_qctdm")]
+visible = false
+layout_mode = 2
+
+[node name="敌人阵营" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(220, 0)
+offset_left = 27.0
+offset_top = 191.0
+offset_right = 1127.0
+offset_bottom = 341.0
+size_flags_horizontal = 3
+
+[node name="monsterContainer" type="HBoxContainer" parent="敌人阵营"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="敌人1" parent="敌人阵营/monsterContainer" instance=ExtResource("2_qctdm")]
+visible = false
+layout_mode = 2
+
+[node name="集气进度" type="Panel" parent="."]
+offset_top = 363.0
+offset_right = 1152.0
+offset_bottom = 403.0
+
+[node name="技能组" type="ScrollContainer" parent="."]
+offset_left = 21.0
+offset_top = 430.0
+offset_right = 1131.0
+offset_bottom = 631.0
+
+[node name="GridContainer" type="GridContainer" parent="技能组"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 4
+
+[node name="技能1" parent="技能组/GridContainer" instance=ExtResource("3_p2cqy")]
+layout_mode = 2
+
+[node name="技能2" parent="技能组/GridContainer" instance=ExtResource("3_p2cqy")]
+layout_mode = 2
+
+[node name="技能3" parent="技能组/GridContainer" instance=ExtResource("3_p2cqy")]
+layout_mode = 2
+
+[node name="技能4" parent="技能组/GridContainer" instance=ExtResource("3_p2cqy")]
+layout_mode = 2

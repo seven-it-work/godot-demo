@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://biwdbhflxftwx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkgrq"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f1o5"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="PanelContainer" type="Panel"]
+custom_minimum_size = Vector2(270, 0)
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_fkgrq")
+
+[node name="Label" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_top = -1.0
+offset_right = 270.0
+offset_bottom = 164.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5f1o5")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 0
+offset_top = 164.0
+offset_right = 270.0
+offset_bottom = 199.0
+text = "名称"

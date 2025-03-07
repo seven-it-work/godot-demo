@@ -25,3 +25,18 @@ static func dict_convert(d:Dictionary)->Dictionary:
 		elif d[key] is Object:
 			d[key]=dict_convert(inst_to_dict(d[key]))
 	return d;
+
+# 权重选择器
+# d{数据:权重值}
+static func weight_selector(d:Dictionary,size:int=1):
+	var total=d.values().reduce(func(accum, number): return accum + number, 0)
+	var re=[]
+	for i in size:
+		var temp=0;
+		var value=randi_range(0,total)
+		for key in d:
+			temp+=d[key]
+			if value<=temp:
+				re.append(key)
+				break
+	return re;

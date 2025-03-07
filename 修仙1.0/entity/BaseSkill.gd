@@ -4,7 +4,7 @@ class_name BaseSkill
 
 var nameInfo:String=""
 
-func get_desc(user:BasePeople,team:Array,enemy:Array)->String:
+func get_desc()->String:
 	return ""
 
 func can_use_skilk(user:BasePeople,team:Array,enemy:Array)->bool:

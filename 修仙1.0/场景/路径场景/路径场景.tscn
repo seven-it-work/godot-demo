@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://blqi8ohobmp2o"]
+
+[ext_resource type="Script" path="res://场景/路径场景/路径场景.gd" id="1_k8c04"]
+[ext_resource type="PackedScene" uid="uid://dy63njyku5ok" path="res://场景/路径场景/path_node.tscn" id="2_7yyhq"]
+
+[node name="路径场景" type="Node2D"]
+script = ExtResource("1_k8c04")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_right = 1151.0
+offset_bottom = 220.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Panel" parent="ScrollContainer/HBoxContainer" instance=ExtResource("2_7yyhq")]
+layout_mode = 2
+
+[node name="Debug" type="Panel" parent="."]
+visible = false
+offset_left = 1057.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 476.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Debug"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

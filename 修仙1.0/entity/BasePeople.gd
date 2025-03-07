@@ -19,6 +19,8 @@ var progress_property:Dictionary={
 		Property.create(1,10,0,0,1,"攻击力",Property.PropertyType.RANDOM_RANGE),
 	"defense":
 		Property.create(1,5,0,0,1,"防御力",Property.PropertyType.RANDOM_RANGE),
+	"gathering":
+		Property.create(1,5,0,0,1,"集气速度",Property.PropertyType.RANDOM_RANGE),
 }
 #当前等级
 var lv:int=0
@@ -40,13 +42,53 @@ var skill_2:BaseSkill=BaseDefense.new()
 var skill_3:BaseSkill
 #技能4
 var skill_4:BaseSkill
+var player_type:String="AI"
+var ai_Callable:Callable=SmailAiAction.new().get_callable()
 
+static func generate_by_excel_id(id:int)->BasePeople:
+	var dic=Settings.怪物.data[id]
+	var d={
+		"@path":"res://entity/xiu/"+dic["修仙类型"]+".gd",
+		"nameInfo":dic["名称"],
+	}
+	var entity:BasePeople=ObjectUtils.dict_2_inst(d)
+	entity._init()
+#	获取属性
+	var property_name=entity.progress_property.values().map(func(t): return t.nameInfo)
+	for index in property_name.size():
+		var name=property_name[index]
+		entity.progress_property.get(entity.progress_property.keys()[index]).random_init_up(dic[name])
+#	等级
+	for i in dic["等级"]:
+		entity.update()
+#	技能初始
+	if dic["技能1"]:
+		var skill=ObjectUtils.dict_2_inst({"@path":"res://entity/skill/"+dic["技能1"]+".gd"})
+		skill._init();
+		entity.skill_1=skill
+	if dic["技能2"]:
+		var skill=ObjectUtils.dict_2_inst({"@path":"res://entity/skill/"+dic["技能2"]+".gd"})
+		skill._init();
+		entity.skill_2=skill
+	if dic["技能3"]:
+		var skill=ObjectUtils.dict_2_inst({"@path":"res://entity/skill/"+dic["技能3"]+".gd"})
+		skill._init();
+		entity.skill_3=skill
+	if dic["技能4"]:
+		var skill=ObjectUtils.dict_2_inst({"@path":"res://entity/skill/"+dic["技能4"]+".gd"})
+		skill._init();
+		entity.skill_4=skill
+	return entity
+
+func is_dead()->bool:
+	return progress_property.get("hp").current<=0
+	
 # 生命值计算（如果是加生命值则不走护盾处理逻辑了）
 func change_hp(n:float,hp_true:bool=false):
 	if n<0:
 		if !hp_true:
 			if progress_property.get("shield").current>0:
-				if progress_property.get("shield").current>n:
+				if progress_property.get("shield").current>-n:
 					progress_property.get("shield").current+=n;
 					return
 				else:

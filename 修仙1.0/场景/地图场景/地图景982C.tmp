@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3rpqecorjc1f"]
+
+[ext_resource type="Script" path="res://场景/地图场景/地图景.gd" id="1_1fo7r"]
+[ext_resource type="PackedScene" uid="uid://bxvwvpkuor127" path="res://场景/地图场景/MapNode.tscn" id="2_bfje7"]
+
+[node name="地图景" type="Node2D"]
+script = ExtResource("1_1fo7r")
+
+[node name="MapNode" parent="." instance=ExtResource("2_bfje7")]
+offset_left = 346.0
+offset_top = 201.0
+offset_right = 346.0
+offset_bottom = 201.0
+
+[node name="MapNode2" parent="." instance=ExtResource("2_bfje7")]
+offset_left = 169.0
+offset_top = 120.0
+offset_right = 169.0
+offset_bottom = 120.0
+nameInfo = "后山"

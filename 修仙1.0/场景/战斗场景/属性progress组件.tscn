@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccg5hlvb04pap"]
+
+[ext_resource type="Script" path="res://场景/战斗场景/属性progress组件.gd" id="1_mm6mx"]
+
+[node name="属性progress组件" type="GridContainer"]
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 2
+script = ExtResource("1_mm6mx")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 6
+text = "名称"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+value = 50.0

@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://j1whsk83nrjs"]
+[gd_scene load_steps=3 format=3 uid="uid://j1whsk83nrjs"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ht0tq"]
+[ext_resource type="PackedScene" uid="uid://b3rpqecorjc1f" path="res://场景/地图场景/地图景.tscn" id="3_gos48"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ht0tq")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_right = 4.0
-offset_bottom = 27.0
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+text = "改变"
+
+[node name="地图景" parent="." instance=ExtResource("3_gos48")]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

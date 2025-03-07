@@ -1,10 +1,10 @@
 extends BaseSkill
 class_name BaseDefense
 
-func _ready() -> void:
+func _init() -> void:
 	self.nameInfo="普通防御"
 	
-func get_desc(user:BasePeople,team:Array,enemy:Array)->String:
+func get_desc()->String:
 	return "对自己施加对应防御力的护盾"
 
 func do_use_skill(user:BasePeople,team:Array,enemy:Array):

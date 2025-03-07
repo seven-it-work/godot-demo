@@ -18,9 +18,33 @@ enum PropertyType {
 @export var upMax:float=0;
 @export var nameInfo:String=""
 @export var propertyType:PropertyType=PropertyType.NUM
+# 属性得分 random_init_up 中up的值
+var score:float=0;
 
 func _to_string() -> String:
 	return JSON.stringify(inst_to_dict(self))
+
+func random_init_up(up:float):
+	score+=up;
+	var remaining=up;
+	for i in 200:
+		if remaining>0:
+			var add=randf_range(0,remaining)
+			remaining-=add;
+			if randi_range(0,1)==0:
+				upMax+=add;
+			else:
+				upMin+=add;
+#	还没有分配完，采用整数分配策略，每次分配步长为1 小于1 直接分配 并结束分配
+	while remaining>0:
+		var add=1
+		if remaining<add:
+			add=remaining
+		remaining-=add
+		if randi_range(0,1)==0:
+			upMax+=add;
+		else:
+			upMin+=add;
 
 func get_value()->float:
 	if self.propertyType==PropertyType.PROGRESS_BAR:

@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy63njyku5ok"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4eyu"]
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(195, 100)
+offset_right = 195.0
+offset_bottom = 207.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4eyu")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 163.0
+offset_right = 177.0
+offset_bottom = 196.0
+text = "选择"
+
+[node name="desc" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 48.0
+offset_right = 181.0
+offset_bottom = 148.0
+text = "测试文本"
+
+[node name="title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 180.0
+offset_bottom = 38.0
+text = "测试文本"
