@@ -1,0 +1,6 @@
+gd_excelexporter.config-WARNING:检测到版本更新，更新配置文件到最新版本 2.1.5
+gd_excelexporter.core.engine-INFO:导出：D:\devSoft\godot\Godot_v4.3-stable_win64.exe\新建文件夹\修仙1.0\settings\data\基础数据.xlsx:怪物 => D:\devSoft\godot\Godot_v4.3-stable_win64.exe\新建文件夹\修仙1.0\settings\dist\基础数据\怪物.gd
+gd_excelexporter.core.engine-INFO:导出：D:\devSoft\godot\Godot_v4.3-stable_win64.exe\新建文件夹\修仙1.0\settings\data\基础数据.xlsx:地点 => D:\devSoft\godot\Godot_v4.3-stable_win64.exe\新建文件夹\修仙1.0\settings\dist\基础数据\地点.gd
+gd_excelexporter.core.engine-INFO:导出：D:\devSoft\godot\Godot_v4.3-stable_win64.exe\新建文件夹\修仙1.0\settings\data\基础数据.xlsx:路径 => D:\devSoft\godot\Godot_v4.3-stable_win64.exe\新建文件夹\修仙1.0\settings\dist\基础数据\路径.gd
+gd_excelexporter.core.engine-INFO:导出：D:\devSoft\godot\Godot_v4.3-stable_win64.exe\新建文件夹\修仙1.0\settings\data\基础数据.xlsx:技能 => D:\devSoft\godot\Godot_v4.3-stable_win64.exe\新建文件夹\修仙1.0\settings\dist\基础数据\技能.gd
+gd_excelexporter.generators.gds2-INFO:创建：dist\settings.gd
