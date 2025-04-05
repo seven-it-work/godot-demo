@@ -54,6 +54,29 @@
 		"name_str": "灵气",
 		"score": 10.0
 	},
+	"lingqi_absorb": {
+		"current": 0.0,
+		"filename": "res://obj/properties/random_propertie.gd",
+		"growth_factor": 1.0,
+		"max_growth": 5.0,
+		"min_growth": 0.0,
+		"name_str": "吸收灵气",
+		"score": 0.0,
+		"max_v": 10.0,
+		"min_v": 1.0
+	},
+	"lingqi_absorb_cool_time":{
+		"current": 0.0,
+		"filename": "res://obj/properties/random_propertie.gd",
+		"growth_factor": -1.0,
+		"max_growth": 1.0,
+		"min_growth": 0.0,
+		"name_str": "吸收灵气冷却时间",
+		"score": 0.0,
+		"max_v": 30.0,
+		"min_v": 5.0
+	},
+	"lingqi_absorb_cool_times":0,
 	"lv": {
 		"current": 0.0,
 		"filename": "res://obj/properties/growth_propertie.gd",
@@ -79,12 +102,12 @@
 	"max_life": {
 		"current": 0.0,
 		"filename": "res://obj/properties/bar_propertie.gd",
-		"growth_factor": 10.0,
-		"max_growth": 1.0,
-		"min_growth": 5.0,
+		"growth_factor": 365,
+		"max_growth": 10.0,
+		"min_growth": 100.0,
 		"name_str": "最大寿命",
 		"score": 0.0,
-		"max_v": 90,
+		"max_v": 21915,
 		"min_v": 0.0
 	},
 	"pregnancy": {
@@ -105,7 +128,7 @@
 	},
 	"is_man": false,
 	"id": "",
-	"birth": 0.0,
+	"birth": 0,
 	"is_fight": false,
 	"filename": "res://obj/people/People.tscn",
 	"charm": 0,
